@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: lister
+  name: lister
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lister
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: lister
+    spec:
+      containers:
+      - image: viveksinghggits/lister:0.1.1
+        name: lister
+        resources: {}
+status: {}
